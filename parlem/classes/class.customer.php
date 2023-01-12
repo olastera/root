@@ -164,6 +164,7 @@ class cCustomer extends configuracion
           <td>' . $value['phone'] . '</td>
       <td class="text-center">
              <a class="btn btn-outline-primary btnUserComo" href="' . $this->URL . 'customer_vista.php?datos=' . $dato_get . '" data-dato="' . $dato_get . '">' . $func->ico("lupa") . '</a>
+             <a class="btn btn-outline-primary btnUserComo" href="' . $this->URL . 'customer_json.php?datos=' . $dato_get . '" data-dato="' . $dato_get . '">Json</a>
         </td>
       </tr>
       ';

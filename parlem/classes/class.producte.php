@@ -134,7 +134,7 @@ function lista ($lista) {
           <td>'.$value['soldAt'].'</td>
       <td class="text-center">
           <a class="btn btn-outline-primary" href="'.$this->URL.'modulos/producte/form_update.php?datos='.$dato_get.'">'.$func->ico("edit").'</a>
-            <a class="btn btn-outline-primary btnUserComo" href="#" data-dato="'.$dato_get.'">'.$func->ico("lupa").'</a>
+             
         </td>
       </tr>
       ';
