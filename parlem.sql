@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 11-01-2023 a las 16:05:39
+-- Tiempo de generación: 12-01-2023 a las 09:34:09
 -- Versión del servidor: 10.5.15-MariaDB-0+deb11u1
 -- Versión de PHP: 7.4.33
 
@@ -63,6 +63,29 @@ CREATE TABLE `customer_producte` (
   `id_producte` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `customer_producte`
+--
+
+INSERT INTO `customer_producte` (`id`, `id_customer`, `id_producte`) VALUES
+(1, 2, 1),
+(2, 2, 1),
+(3, 2, 12),
+(4, 2, 12),
+(5, 2, 1),
+(6, 2, 10),
+(7, 2, 9),
+(8, 2, 5),
+(9, 2, 4),
+(10, 3, 12),
+(11, 3, 1),
+(12, 3, 10),
+(13, 3, 9),
+(14, 4, 1),
+(15, 4, 10),
+(16, 4, 9),
+(17, 5, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -83,7 +106,16 @@ CREATE TABLE `producte` (
 --
 
 INSERT INTO `producte` (`id`, `productName`, `productTypeName`, `numeracioTerminal`, `soldAt`, `customerId`) VALUES
-(1, 'FIBRA 1000 ADAMO', 'ftth', 933933933, '2023-01-11 07:54:35', 11112);
+(1, 'FIBRA 1000 ADAMO', 'ftth', 933933933, '2023-01-11 07:54:35', 11112),
+(4, 'Producto prueba 1', 'foto', 342342, '2023-01-11 15:20:13', 11112),
+(5, 'Producto prueba 1', 'foto', 342342, '2023-01-11 15:21:11', 11112),
+(6, 'Producto prueba 2', 'impresora', 35543245, '2023-01-11 15:21:11', 11165),
+(7, 'Producto prueba 1', 'foto', 342342, '2023-01-11 15:21:26', 11112),
+(8, 'Producto prueba 2', 'impresora', 35543245, '2023-01-11 15:21:26', 11165),
+(9, 'Producto prueba 1', 'foto', 342342, '2023-01-11 15:21:38', 11112),
+(10, 'Producto prueba 2', 'impresora', 35543245, '2023-01-11 15:21:38', 11165),
+(11, 'Producto prueba 5', 'pc', 2355434, '2023-01-11 15:21:38', 13465),
+(12, 'Producto prueba 6', 'pc', 254234, '2023-01-11 15:21:38', 132342);
 
 --
 -- Índices para tablas volcadas
@@ -118,10 +150,16 @@ ALTER TABLE `customer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT de la tabla `customer_producte`
+--
+ALTER TABLE `customer_producte`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT de la tabla `producte`
 --
 ALTER TABLE `producte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
