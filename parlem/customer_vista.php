@@ -12,6 +12,9 @@ require_once($PATH_ROOT."/classes/load_classes.php");
       $arrayId = array('id' =>$datos_get['id']);
       $customer = new cCustomer;
       $lista = $customer->consulta($arrayId);
+
+      //lista de productos
+       $productos = $customer->select_producto($datos_get['id']);
       
       if (count($lista)!=1) {
         header('Location: '.$URL.'modulos/customer');
@@ -49,6 +52,7 @@ require_once($PATH_ROOT."/classes/load_classes.php");
      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <h2>Vista Customer</h2>
         <?php   var_dump2($lista); ?>
+        <?php   var_dump2($productos); ?>
        <p> Es una pruba para parlem</p>
      </main>
   </div>
